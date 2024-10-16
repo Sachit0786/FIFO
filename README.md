@@ -6,8 +6,8 @@ This project contains a Verilog-based implementation of a Synchronous FIFO (Firs
 1) **Data Width**: 8-bit wide data bus (parameterized).<br>
 2) **Depth**: Default FIFO depth is 16 (parameterizable).<br>
 3) **Status Signals**: <br>
-  &nbsp;&nbsp; empty: Indicates whether the FIFO is empty (i.e., no data available to read). <br>
-  &nbsp;&nbsp; full: Indicates whether the FIFO is full (i.e., no more space available to write). <br>
+  &nbsp;&nbsp; **empty**: Indicates whether the FIFO is empty (i.e., no data available to read). <br>
+  &nbsp;&nbsp; **full**: Indicates whether the FIFO is full (i.e., no more space available to write). <br>
 4) **Reset Signal**: The FIFO can be reset asynchronously, setting the read and write pointers to zero and marking the FIFO as empty.<br>
 5) **Parameterizable Pointers**: FIFO uses parameterized write (wr_ptr) and read (rd_ptr) pointers for flexibility in different depth configurations.<br>
 6) **Write/Read Enable**: Independent write_en and read_en signals control whether the module writes or reads from the memory.<br>
@@ -51,3 +51,6 @@ The FIFO is designed to be configurable with the following parameters:<br>
 1) **DEPTH**: Defines the depth (number of entries) in the FIFO memory. The default value is 16.<br>
 2) **DATA_WIDTH**: Defines the width of each data word. The default value is 8 bits.<br>
 3) **PTR_SIZE**: Defines the size of the write and read pointers, which is determined by the depth of the FIFO.<br>
+
+
+This synchronous FIFO module is a flexible and robust design for buffering data in FPGA projects. It can be used in applications where data needs to be written and read at different times but synchronized to the same clock signal. With adjustable depth and data width parameters, the FIFO can be tailored to meet various data buffering needs.
